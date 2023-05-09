@@ -23,7 +23,7 @@ export default {
         <li
             v-for="(element, index) in papelera"
             :key="index"
-            class="text-base flex justify-center flex-col items-center p-3"
+            class="text-base flex justify-center flex-col items-center p-3 dark:text-white"
         >
             <NuxtIcon 
                 :name="element.icon" 

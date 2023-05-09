@@ -59,28 +59,28 @@ export default {
 </script>
 <template>
     <section
-        class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-4xl bg-gray-200"
+        class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-4xl bg-gray-200 dark:bg-black"
     >
         <header
-            class="flex justify-between items-center p-1 bg-gray-200 relative"
+            class="flex justify-between items-center p-1 bg-gray-200 dark:bg-black relative"
         >
             <div
-                class="text-center cursor-pointer flex items-center w-5 h-5 border-2 border-solid border-gray-500 absolute left-5 bg-white top-1/2 -translate-y-1/2 z-10"
+                class="text-center cursor-pointer flex items-center w-5 h-5 border-2 border-solid border-gray-500 dark:border-black absolute left-5 bg-white dark:bg-white top-1/2 -translate-y-1/2 z-10"
                 @click="$emit('updateCloseFolder', this.id)"
             ></div>
             <div
                 class="flex hero flex-1 justify-center"
             >
                 <div
-                    class="flex items-center justify-center bg-gray-200 px-2"
+                    class="flex items-center justify-center bg-gray-200 dark:bg-black px-2"
                 >
                     <NuxtIcon 
                         name="folder-open" 
                         size="20px"
-                        class="icon text-3xl mr-2"
+                        class="icon text-3xl mr-2 dark:text-white"
                     />
                     <h3
-                    class="text-base"
+                    class="text-base dark:text-white"
                     >
                         {{ folderName }}  
                     </h3>
@@ -88,20 +88,20 @@ export default {
             </div>
         </header>
         <div
-            class="border-l border-t border-solid border-black m-2"
+            class="border-l border-t border-solid border-black dark:border-white m-2"
         >
             <header
-                class="border-b border-r border-solid border-black p-2 flex items-center justify-center bg-gray-200"
+                class="border-b border-r border-solid border-black p-2 flex items-center justify-center bg-gray-200 dark:bg-black"
             >
                 <span
-                    class="text-sm"
+                    class="text-sm dark:text-white"
                 >
                     {{ lengthFiles }} items, {{ randomNumber }} KB
                 </span>
             </header>
             <div 
                 ref="componente"
-                class="p-2 bg-white relative h-96 overflow-y-auto"
+                class="p-2 bg-white dark:bg-neutral-800 relative h-96 overflow-y-auto"
             >
                 <component
                     :is="componentName"
@@ -124,5 +124,11 @@ export default {
     opacity: 0.8;
     background-size: 4px 4px;
     background-image:  repeating-linear-gradient(0deg, #333, #333 1px, #ddd 1px, #ddd);
+}
+.dark .hero {
+    background-color: #111;
+    opacity: 0.8;
+    background-size: 4px 4px;
+    background-image:  repeating-linear-gradient(0deg, #888, #888 1px, #111 1px, #111);
 }
 </style>

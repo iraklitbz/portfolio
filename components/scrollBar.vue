@@ -42,65 +42,65 @@ export default {
 </script>
 <template>
     <div
-        class="scrollbar fixed left-[9px] bottom-[7px] flex justify-end bg-gray-200 w-[calc(100%-18px)] h-5"
+        class="scrollbar fixed left-[9px] bottom-[7px] flex justify-end bg-gray-200 dark:bg-black w-[calc(100%-18px)] h-5"
     >
             <div
-                class="border-t border-b border-solid border-black w-full h-5 flex justify-end"
+                class="border-t border-b border-solid border-black dark:border-white w-full h-5 flex justify-end"
             >
                 <div
                     class="flex"
                 >
                     <div
-                        class="border-l border-r border-solid border-black px-1 flex items-center justify-center"
+                        class="border-l border-r border-solid border-black dark:border-white px-1 flex items-center justify-center"
                     >
                         <NuxtIcon 
                             name="chevron-left" 
-                            class="icon text-sm text-gray-400"
+                            class="icon text-sm text-gray-400 dark:text-white"
                         />
                     </div>
                     <div
-                        class="border-r border-solid border-black px-1 flex items-center justify-center"
+                        class="border-r border-solid border-black dark:border-white px-1 flex items-center justify-center"
                     >
                         <NuxtIcon 
                             name="chevron-right" 
-                            class="icon text-sm text-gray-400"
+                            class="icon text-sm text-gray-400 dark:text-white"
                         />
                     </div>
                 </div>
             </div>
             <div
-                class="w-5 text-gray-400"
+                class="w-5 text-gray-400 dark:text-white"
             >
             //
             </div>
         </div>
         <div
             ref="scrollBar"
-            class="scrollbar fixed right-[8px] top-[87px] h-[calc(100%-113px)] w-5 border-l border-r border-b border-solid border-black flex items-end  bg-gray-200 overflow-hidden"
+            class="scrollbar fixed right-[8px] top-[87px] h-[calc(100%-113px)] w-5 border-l border-r border-b border-solid border-black dark:border-white flex items-end  bg-gray-200 dark:bg-black overflow-hidden"
         >
             <div
-                class="flex flex-col w-5 relative z-40 bg-slate-200"
+                class="flex flex-col w-5 relative z-40 bg-slate-200 dark:bg-black"
             >
                 <div
-                    class="border-t border-solid border-black py-1 flex items-center justify-center"
+                    class="border-t border-solid border-black dark:border-white py-1 flex items-center justify-center"
                 >
                     <NuxtIcon 
                         name="chevron-up" 
-                        class="icon text-sm text-gray-400"
+                        class="icon text-sm text-gray-400 dark:text-white"
                     />
                 </div>
                 <div
-                    class="border-t border-solid border-black py-1 flex items-center justify-center"
+                    class="border-t border-solid border-black dark:border-white py-1 flex items-center justify-center"
                 >
                     <NuxtIcon 
                         name="chevron-down" 
-                        class="icon text-sm text-gray-400"
+                        class="icon text-sm text-gray-400 dark:text-white"
                     />
                 </div>
             </div>
             <div
                 v-if="scrollHeight > 360"
-                class="bg-gray-500 w-full z-10 absolute"
+                class="bg-gray-500 dark:bg-neutral-600 w-full z-10 absolute"
                 :style="`${scrollBarHeight}; ${scrollBarPosition}`"
             ></div>
         </div>

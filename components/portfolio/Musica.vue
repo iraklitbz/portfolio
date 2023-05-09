@@ -40,7 +40,7 @@
                     />
                 </figure>
                 <h2
-                    class="mt-1 text-sm"
+                    class="mt-1 text-sm dark:text-white"
                 >
                     {{ handleHeadlines(element.snippet.title) }}
                 </h2>

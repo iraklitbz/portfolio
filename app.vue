@@ -70,7 +70,7 @@ export default {
 
 <template>
   <div
-    class="bg-white border-b border-solid border-black"
+    class="bg-white dark:bg-black border-b border-solid border-black dark:border-white"
   >
     <Header 
       @update-about="handleClickMenu(98)"
@@ -90,11 +90,11 @@ export default {
             <nuxt-icon 
               :name="element.icon" 
               size="100px"
-              class="icon text-6xl"
+              class="icon text-6xl dark:text-white"
             />
             <h2
               class="text-sm text-center max-w-[100px]"
-              :class="getFolderClass(element.id) ? 'bg-black text-white' : 'text-black'"
+              :class="getFolderClass(element.id) ? 'bg-black text-white dark:bg-white dark:text-black' : 'text-black dark:text-white'"
             >
                 {{  element.name }}
             </h2>
@@ -121,6 +121,10 @@ export default {
 <style>
     body {
         background-color: #ddd;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    }
+    html.dark body {
+        background-color: #222;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     }
 </style>

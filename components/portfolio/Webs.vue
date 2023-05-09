@@ -53,7 +53,7 @@ export default {
             <a
                 :href="element.url"
                 target="_blank"
-                class="flex justify-center flex-col items-center"
+                class="flex justify-center flex-col items-center dark:text-white"
             >
                 <NuxtIcon 
                     :name="element.icon" 

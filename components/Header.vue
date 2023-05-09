@@ -37,11 +37,11 @@ export default {
                     hasDropdown: false,
                     dropdown: [
                         {
-                            id: 0,
+                            id: 1,
                             name: 'Original'
                         },
                         {
-                            id: 1,
+                            id: 2,
                             name: 'Dark'                
                         }
                     ]
@@ -97,21 +97,21 @@ export default {
                 <li
                     v-for="(element, index) in navbar"
                     class="px-4 py-2 cursor-pointer relative"
-                    :class="element.hasDropdown ? 'bg-black text-white' : 'text-black'"
+                    :class="element.hasDropdown ? 'bg-black text-white dark:bg-white dark:text-black' : 'text-black dark:text-white'"
                     @click="handleSubMenu(element)"
                 >
                     {{ element.name }}
                     <Dropdown 
                         v-if="element.hasDropdown && element.dropdown.length > 0"
                         :dropdown="element.dropdown"
-                        class="absolute top-[41px] left-0 bg-white z-10 w-[240px] border-b-4 border-l border-r-4 border-solid border-black"
+                        class="absolute top-[41px] left-0 z-10 w-[240px] border-b-4 border-l border-r-4 border-solid border-black"
                         :has-dropdown="element.hasDropdown"
                         :icon="element.icon"
                     />
                 </li>
                 <li
                     class="px-4 py-2 cursor-pointer relative"
-                    :class="aboutMeActive ? 'bg-black text-white' : 'text-black'"
+                    :class="aboutMeActive ? 'bg-black text-white dark:bg-white dark:text-black' : 'text-black dark:text-white'"
                     @click="handleAboutMe"
                 >
                     About me
