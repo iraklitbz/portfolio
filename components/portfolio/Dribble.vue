@@ -15,12 +15,12 @@
 <template>
     <ul
         ref="box"
-        class="grid grid-cols-3 gap-4 pl-2 pr-4 pb-6 overflow-scroll"
+        class="grid grid-cols-1 md:grid-cols-3 gap-4 pl-2 pr-4 pb-6 overflow-scroll w-[calc(100%-20px)]"
     >
         <li
             v-for="(element, index) in dribbles"
             :key="index"
-            class="text-base p-3"
+            class="text-base p-3 text-center"
         >
             <a
                 :href="element.html_url"
