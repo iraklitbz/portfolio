@@ -20,12 +20,12 @@
 <template>
     <ul
         ref="box"
-        class="grid grid-cols-5 gap-4 pl-2 pr-4 pb-6"
+        class="grid grid-cols-2 md:grid-cols-5 gap-4 pl-2 pr-4 pb-6 w-[calc(100%-10px)]"
     >
         <li
             v-for="(element, index) in musicList"
             :key="index"
-            class="text-base flex justify-center flex-col items-center p-3"
+            class="text-base flex justify-center flex-col items-center p-3 text-center"
         >
             <a
                 :href="`https://www.youtube.com/watch?v=${element.snippet.resourceId.videoId}`"

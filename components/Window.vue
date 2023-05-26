@@ -50,16 +50,13 @@ export default {
         },
         handleUpdateScrollHeight (height) {
             this.scrollHeight = height
-        },
-        handleUpdateScrollPosition(position) {
-            console.log(position)
         }
     }
 }
 </script>
 <template>
     <section
-        class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-6xl bg-gray-200 dark:bg-black"
+        class="w-full lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-6xl bg-gray-200 dark:bg-black"
     >
         <header
             class="flex justify-between items-center p-1 bg-gray-200 dark:bg-black relative"
@@ -101,7 +98,7 @@ export default {
             </header>
             <div 
                 ref="componente"
-                class="p-2 bg-white dark:bg-neutral-800 relative h-96 overflow-y-auto"
+                class="p-2 bg-white dark:bg-neutral-800 relative md:h-96 overflow-y-auto"
             >
                 <component
                     :is="componentName"

@@ -33,7 +33,7 @@
 <template>
     <ul
         ref="box"
-        class="grid grid-cols-5 gap-4 pl-2 pr-4 pb-6 py-3"
+        class="grid grid-cols-2 md:grid-cols-5 gap-4 pl-2 pr-4 pb-6 py-3 w-[calc(100%-10px)]"
     >
         <li
             v-for="(element, index) in books"

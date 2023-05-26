@@ -1,11 +1,11 @@
 <template>
     <section
-        class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-4xl bg-gray-200 dark:bg-black"
+        class="w-full lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-4xl bg-gray-200 dark:bg-black"
     >
         <div
             class="border-t border-b-4 border-l border-r-4 border-solid border-black dark:border-white"
         >
-            <div class="py-6 px-10 bg-white dark:bg-black relative h-96 overflow-y-auto flex flex-col justify-between">
+            <div class="py-6 px-5 md:px-10 bg-white dark:bg-black relative md:h-96 overflow-y-auto flex flex-col justify-between">
                 <div>
                     <h2
                         class="text-3xl mt-8 mb-4 text-center dark:text-white"
@@ -19,11 +19,11 @@
                     </h6>
                 </div>
                 <div
-                    class="divider h-5 bg-black dark:bg-neutral-600 w-full"
+                    class="divider h-5 bg-black dark:bg-neutral-600 w-full mt-10 md:mt-0"
                 >
 
                 </div>
-                <ul class="flex flex-wrap gap-4 justify-between">
+                <ul class="flex flex-wrap gap-4 justify-between mt-10 md:mt-0">
                     <li>
                         <a
                             href="https://www.linkedin.com/in/irakli-tavberidze-47ba0338/"

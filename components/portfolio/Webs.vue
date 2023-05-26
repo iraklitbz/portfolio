@@ -48,12 +48,12 @@ export default {
 </script>
 <template>
     <ul
-        class="flex items-center"
+        class="flex items-center flex-wrap w-[calc(100%-20px)]"
     >
         <li
             v-for="(element, index) in webs"
             :key="index"
-            class="text-base items-center p-3"
+            class="text-base items-center p-3 w-1/2 md:w-auto text-center"
         >
             <a
                 :href="element.url"

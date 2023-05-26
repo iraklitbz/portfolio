@@ -17,14 +17,14 @@ export default {
                   name: 'Dribble',
                   icon: 'folder',
                   component: 'Dribble',
-                  position: 'transform -translate-x-1/2 -translate-y-1/2 top-[47%] left-[47%]'
+                  position: 'transform -translate-x-1/2 -translate-y-1/2 top-[50%] md:top-[47%] left-[50%] md:left-[47%]'
               },
               {
                   id: 2,
                   name: 'Playlist',
                   icon: 'world',
                   component: 'Musica',
-                  position: 'transform -translate-x-1/2 -translate-y-1/2 top-[53%] left-[53%]'
+                  position: 'transform -translate-x-1/2 -translate-y-1/2 top-[50%] md:top-[53%] left-[50%] md:left-[53%]'
               },
               {
                   id: 3,
@@ -38,7 +38,7 @@ export default {
                   name: 'Bin',
                   icon: 'trash',
                   component: 'Papelera',
-                  position: 'transform -translate-x-1/2 -translate-y-1/2 top-[47%] left-[47%]'
+                  position: 'transform -translate-x-1/2 -translate-y-1/2 top-[50%] md:top-[47%] left-[50%] md:left-[47%]'
               }
           ]
         }
@@ -80,7 +80,7 @@ export default {
   <div class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-6xl pb-7 flex flex-col justify-between px-4 relative h-[calc(100vh-41px)]">
     <section>
       <div
-        class="flex items-center gap-20 mt-10"
+        class="flex items-center gap-10 md:gap-20 mt-10 flex-wrap"
       >
         <div
           v-for="(element, index) in portfolio"

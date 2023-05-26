@@ -82,12 +82,12 @@ export default {
 </script>
 <template>
     <header
-        class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-6xl"
+        class="w-[calc(100%_-_0.5rem)] lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-6xl"
         v-click-outside="handleSubMenuClose"
     >
         <nav>
             <ul
-                class="flex items-center"
+                class="flex items-center flex-wrap py-4 md:py-0"
             >
                 <li
                     class="px-4 py-2 cursor-pointer relative text-red-500"

@@ -18,7 +18,7 @@ export default {
 </script>
 <template>
     <ul
-        class="flex items-center"
+        class="flex items-center flex-wrap w-[calc(100%-10px)]"
     >
         <li
             v-for="(element, index) in papelera"
