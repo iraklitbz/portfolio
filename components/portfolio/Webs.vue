@@ -9,6 +9,11 @@ export default {
                     icon: 'computer'
                 },
                 {
+                    name: 'Purista',
+                    url: 'https://purista.ge/',
+                    icon: 'computer'
+                },
+                {
                     name: 'dribe',
                     url: 'https://dribe.es/',
                     icon: 'computer'

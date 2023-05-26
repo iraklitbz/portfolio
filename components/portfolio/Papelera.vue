@@ -4,7 +4,7 @@ export default {
         return {
             papelera: [
                 {
-                    name: 'Papelera',
+                    name: 'Soon...',
                     url: 'https://www.google.com',
                     icon: 'pdf'
                 }

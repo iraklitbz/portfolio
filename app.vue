@@ -21,21 +21,21 @@ export default {
               },
               {
                   id: 2,
-                  name: 'Lista de reproducción',
+                  name: 'Playlist',
                   icon: 'world',
                   component: 'Musica',
                   position: 'transform -translate-x-1/2 -translate-y-1/2 top-[53%] left-[53%]'
               },
               {
                   id: 3,
-                  name: 'Libros',
+                  name: 'Books',
                   icon: 'books',
                   component: 'Books',
                   position: 'transform -translate-x-1/2 -translate-y-1/2 top-[50%] left-[50%]'
               },
               {
                   id: 4,
-                  name: 'Papelera',
+                  name: 'Bin',
                   icon: 'trash',
                   component: 'Papelera',
                   position: 'transform -translate-x-1/2 -translate-y-1/2 top-[47%] left-[47%]'

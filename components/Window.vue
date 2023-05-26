@@ -59,7 +59,7 @@ export default {
 </script>
 <template>
     <section
-        class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-4xl bg-gray-200 dark:bg-black"
+        class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-6xl bg-gray-200 dark:bg-black"
     >
         <header
             class="flex justify-between items-center p-1 bg-gray-200 dark:bg-black relative"

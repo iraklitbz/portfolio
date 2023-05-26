@@ -6,7 +6,7 @@ export default {
             navbar: [
                 {
                     id: 1,
-                    name: 'Contacto',
+                    name: 'Contact',
                     hasDropdown: false,
                     dropdown: [
                         {
@@ -33,7 +33,7 @@ export default {
                 },
                 {
                     id: 2,
-                    name: 'Aparencia',
+                    name: 'Appearance',
                     hasDropdown: false,
                     dropdown: [
                         {
