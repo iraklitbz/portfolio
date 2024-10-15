@@ -42,7 +42,7 @@ export default {
 </script>
 <template>
     <div
-        class="scrollbar fixed left-[9px] bottom-[7px] flex justify-end bg-gray-200 dark:bg-black w-[calc(100%-18px)] h-5"
+        class="scrollbar fixed left-[9px] bottom-[7px] hidden md:flex justify-end bg-gray-200 dark:bg-black w-[calc(100%-18px)] h-5"
     >
             <div
                 class="border-t border-b border-solid border-black dark:border-white w-full h-5 flex justify-end"
@@ -76,7 +76,7 @@ export default {
         </div>
         <div
             ref="scrollBar"
-            class="scrollbar fixed right-[8px] top-[87px] h-[calc(100%-113px)] w-5 border-l border-r border-b border-solid border-black dark:border-white flex items-end  bg-gray-200 dark:bg-black overflow-hidden"
+            class="scrollbar hidden fixed right-[8px] top-[87px] h-[calc(100%-113px)] w-5 border-l border-r border-b border-solid border-black dark:border-white md:flex items-end  bg-gray-200 dark:bg-black overflow-hidden"
         >
             <div
                 class="flex flex-col w-5 relative z-40 bg-slate-200 dark:bg-black"

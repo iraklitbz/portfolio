@@ -10,35 +10,35 @@ export default {
                   name: 'Webs',
                   icon: 'folder',
                   component: 'Webs',
-                  position: 'transform -translate-x-1/2 -translate-y-1/2 top-[50%] left-[50%]'
+                  position: 'md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:top-[50%] md:left-[50%]'
               },
               {
                   id: 1,
                   name: 'Dribble',
                   icon: 'folder',
                   component: 'Dribble',
-                  position: 'transform -translate-x-1/2 -translate-y-1/2 top-[50%] md:top-[47%] left-[50%] md:left-[47%]'
+                  position: 'md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:top-[50%] md:top-[47%] md:left-[50%] md:left-[47%]'
               },
               {
                   id: 2,
                   name: 'Playlist',
                   icon: 'world',
                   component: 'Musica',
-                  position: 'transform -translate-x-1/2 -translate-y-1/2 top-[50%] md:top-[53%] left-[50%] md:left-[53%]'
+                  position: 'md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:top-[50%] md:md:top-[53%] md:left-[50%] md:left-[53%]'
               },
               {
                   id: 3,
                   name: 'Books',
                   icon: 'books',
                   component: 'Books',
-                  position: 'transform -translate-x-1/2 -translate-y-1/2 top-[50%] left-[50%]'
+                  position: 'md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:top-[50%] md:left-[50%]'
               },
               {
                   id: 4,
                   name: 'Bin',
                   icon: 'trash',
                   component: 'Papelera',
-                  position: 'transform -translate-x-1/2 -translate-y-1/2 top-[50%] md:top-[47%] left-[50%] md:left-[47%]'
+                  position: 'md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:top-[50%] md:md:top-[47%] md:left-[50%] md:md:left-[47%]'
               }
           ]
         }
@@ -53,12 +53,14 @@ export default {
     },
     methods: {
         handleClickFolder (id) {
+            document.body.classList.add('overflow-hidden')
             this.foldersOpen.push(id)
         },
         handleClickMenu (id) {
             this.modalOpen.push(id)
         },
         handleUpdateCloseFolder (id) {
+            document.body.classList.remove('overflow-hidden')
             this.foldersOpen = this.foldersOpen.filter(folder => folder !== id)
         },
         handleUpdateCloseModal () {
@@ -104,7 +106,7 @@ export default {
     <Window
       v-for="(element, index) in foldersOpen"
       :key="index"
-      class="absolute"
+      class="fixed top-0 left-0 md:absolute z-50"
       :class="portfolio[element].position"
       :folder-name="portfolio[element].name"
       :component-name="portfolio[element].component"

@@ -98,7 +98,7 @@ export default {
             </header>
             <div 
                 ref="componente"
-                class="p-2 bg-white dark:bg-neutral-800 relative md:h-96 overflow-y-auto"
+                class="p-2 bg-white dark:bg-neutral-800 relative h-[calc(100vh-80px)] md:h-96 overflow-y-auto"
             >
                 <component
                     :is="componentName"
