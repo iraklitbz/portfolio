@@ -4,6 +4,16 @@ export default {
         return {
             webs: [
                 {
+                    name: 'TUI Portugal',
+                    url: 'https://www.tui.pt/',
+                    icon: 'computer'
+                },
+                {
+                    name: 'Buscabiblio (niversidad Complutense de Madrid)',
+                    url: 'https://buscabiblio.com/',
+                    icon: 'computer'
+                },
+                {
                     name: 'Noel Rayo',
                     url: 'https://noelrayo.com/',
                     icon: 'computer'
@@ -19,13 +29,23 @@ export default {
                     icon: 'computer'
                 },
                 {
+                    name: 'Sambawood',
+                    url: 'https://sambawood.com/',
+                    icon: 'computer'
+                },
+                {
                     name: 'Jauregui',
                     url: 'https://nachojauregui.com/',
                     icon: 'computer'
                 },
                 {
-                    name: 'Jauregui',
+                    name: 'administracionesvesta',
                     url: 'https://administracionesvesta.com/',
+                    icon: 'computer'
+                },
+                {
+                    name: 'lunchclub-033',
+                    url: 'https://lunchclub-033.foodticket.shop/',
                     icon: 'computer'
                 },
                 {
