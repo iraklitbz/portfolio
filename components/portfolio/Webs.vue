@@ -9,7 +9,7 @@ export default {
                     icon: 'computer'
                 },
                 {
-                    name: 'Buscabiblio (niversidad Complutense de Madrid)',
+                    name: 'Buscabiblio',
                     url: 'https://buscabiblio.com/',
                     icon: 'computer'
                 },
