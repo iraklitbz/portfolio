@@ -4,6 +4,11 @@ export default {
         return {
             webs: [
                 {
+                    name: 'Anako Turashvili',
+                    url: 'https://anakoturashvili.com',
+                    icon: 'computer'
+                },
+                {
                     name: 'TUI Portugal',
                     url: 'https://www.tui.pt/',
                     icon: 'computer'
