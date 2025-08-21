@@ -62,9 +62,6 @@ export default {
         handleUpdateCloseFolder (id) {
             document.body.classList.remove('overflow-hidden')
             this.foldersOpen = this.foldersOpen.filter(folder => folder !== id)
-        },
-        handleUpdateCloseModal () {
-            this.modalOpen = this.modalOpen.filter(modal => modal !== 98)
         }
     }
 }
@@ -76,7 +73,6 @@ export default {
   >
     <Header 
       @update-about="handleClickMenu(98)"
-      v-click-outside="handleUpdateCloseModal"
     />
   </div>  
   <div class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-6xl pb-7 flex flex-col justify-between px-4 relative h-[calc(100vh-41px)]">
@@ -89,7 +85,7 @@ export default {
           class="box cursor-pointer flex flex-col items-center"
           @click="handleClickFolder(element.id)"
         >
-            <nuxt-icon 
+            <Icon 
               :name="element.icon" 
               size="100px"
               class="icon text-6xl dark:text-white"

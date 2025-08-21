@@ -38,7 +38,7 @@ export default {
                 target="_blank"
                 class="border border-solid border-white border-opacity-5 flex items-center justify-center selection:bg-blue-700 text-base text-white"
             >
-                <nuxt-icon 
+                <Icon 
                     :name="element.icon" 
                     size="50px"
                     class="icon text-3xl sm:text-4xl"

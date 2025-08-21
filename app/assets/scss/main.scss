@@ -1,0 +1,20 @@
+@use "mixins";
+@import "tailwindcss";
+
+@theme {
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-white: #ffffff;
+  --color-hell-black: #000;
+  --color-dark-black: #111;
+  --color-black: #111;
+  --color-orange: #d8491d;
+}
+
+@layer base {
+    /* Set global styles */
+    html,
+    body {
+        font-family: 'ChicagoFLF';
+    }
+}
