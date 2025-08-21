@@ -1,7 +1,6 @@
 import type { YouTubePlaylistResponse, YouTubeVideo } from '~/types'
 
 export const useMusic = () => {
-  const { $fetch } = useNuxtApp()
   const runtimeConfig = useRuntimeConfig()
   
   const music = ref<YouTubeVideo[]>([])
@@ -14,6 +13,40 @@ export const useMusic = () => {
       error.value = null
       
       const apiKey = runtimeConfig.public.youtube_api_key
+      
+      if (!apiKey) {
+        // Mock data when no API key is provided
+        music.value = [
+          {
+            snippet: {
+              title: 'Sample Song 1 - Artist Name',
+              thumbnails: {
+                medium: {
+                  url: 'https://via.placeholder.com/320x180/ff6b6b/ffffff?text=Sample+Song+1'
+                }
+              },
+              resourceId: {
+                videoId: 'dQw4w9WgXcQ'
+              }
+            }
+          },
+          {
+            snippet: {
+              title: 'Sample Song 2 - Another Artist', 
+              thumbnails: {
+                medium: {
+                  url: 'https://via.placeholder.com/320x180/4ecdc4/ffffff?text=Sample+Song+2'
+                }
+              },
+              resourceId: {
+                videoId: 'dQw4w9WgXcQ'
+              }
+            }
+          }
+        ]
+        return
+      }
+      
       const playlistId = "PLX7O3ilIJySfSt_UAwJ4JvJ9bQa90Xh4j"
       const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=100&playlistId=${playlistId}&key=${apiKey}`
       
