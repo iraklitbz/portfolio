@@ -1,32 +1,31 @@
-<script>
-export default {
-    props: {
-        dropdown: {
-            type: Array,
-            default: () => []
-        },
-        hasDropdown: {
-            type: Boolean,
-            default: false
-        },
-        url: {
-            type: String,
-            default: ''
-        },
-        redirect: {
-            type: Boolean,
-            default: false
-        }
-    },
-    methods: {
-        handleAspectMode (id) {
-            if (id === 2) {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-            }
-        }
-    }
+<script setup lang="ts">
+interface DropdownItem {
+  id?: number
+  name: string
+  url?: string
+  icon?: string
+}
+
+interface DropdownProps {
+  dropdown?: DropdownItem[]
+  hasDropdown?: boolean
+  url?: string
+  redirect?: boolean
+}
+
+withDefaults(defineProps<DropdownProps>(), {
+  dropdown: () => [],
+  hasDropdown: false,
+  url: '',
+  redirect: false
+})
+
+const handleAspectMode = (id: number) => {
+  if (id === 2) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
 }
 </script>
 <template>
@@ -39,7 +38,7 @@ export default {
             @click="element.id ? handleAspectMode(element.id) : null"
 
         >
-            <NuxtIcon 
+            <Icon 
                 v-if="element.icon"
                 :name="element.icon" 
                 class="icon text-2xl mr-2"

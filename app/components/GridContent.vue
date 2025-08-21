@@ -1,43 +1,42 @@
-<script>
-export default {
-    name: 'GridContent',
-    data() {
-        return {
-            porfolio: [
-                {
-                    title: 'Dribe',
-                    url: 'https://dribe.es',
-                    icon: 'ი'
-                },
-                {
-                    title: 'Noel Rayo',
-                    url: 'https://noelrayo.com/',
-                    icon: 'რ'
-                },
-                {
-                    title: 'Jauregui',
-                    url: 'https://nachojauregui.com/',
-                    icon: 'ა'
-                },
-                {
-                    title: 'Iberiainfo',
-                    url: 'https://www.iberiainfo.org/',
-                    icon: 'კ'
-                },
-                {
-                    title: 'Vesta',
-                    url: 'https://administracionesvesta.com/',
-                    icon: 'ლ'
-                },
-                {
-                    title: 'More...',
-                    url: 'https://github.com/iraklitbz',
-                    icon: 'ი'
-                }
-            ]
-        }
-    }
+<script setup lang="ts">
+interface PortfolioItem {
+  title: string
+  url: string
+  icon: string
 }
+
+const porfolio = ref<PortfolioItem[]>([
+  {
+    title: 'Dribe',
+    url: 'https://dribe.es',
+    icon: 'ი'
+  },
+  {
+    title: 'Noel Rayo',
+    url: 'https://noelrayo.com/',
+    icon: 'რ'
+  },
+  {
+    title: 'Jauregui',
+    url: 'https://nachojauregui.com/',
+    icon: 'ა'
+  },
+  {
+    title: 'Iberiainfo',
+    url: 'https://www.iberiainfo.org/',
+    icon: 'კ'
+  },
+  {
+    title: 'Vesta',
+    url: 'https://administracionesvesta.com/',
+    icon: 'ლ'
+  },
+  {
+    title: 'More...',
+    url: 'https://github.com/iraklitbz',
+    icon: 'ი'
+  }
+])
 </script>
 <template>
     <div class="main-logo">

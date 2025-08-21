@@ -1,69 +1,72 @@
-<script>
-export default {
-    data () {
-        return {
-          foldersOpen: [],
-          modalOpen: [],
-          portfolio: [
-              {
-                  id: 0,
-                  name: 'Webs',
-                  icon: 'folder',
-                  component: 'Webs',
-                  position: 'md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:top-[50%] md:left-[50%]'
-              },
-              {
-                  id: 1,
-                  name: 'Dribble',
-                  icon: 'folder',
-                  component: 'Dribble',
-                  position: 'md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:top-[50%] md:top-[47%] md:left-[50%] md:left-[47%]'
-              },
-              {
-                  id: 2,
-                  name: 'Playlist',
-                  icon: 'world',
-                  component: 'Musica',
-                  position: 'md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:top-[50%] md:md:top-[53%] md:left-[50%] md:left-[53%]'
-              },
-              {
-                  id: 3,
-                  name: 'Books',
-                  icon: 'books',
-                  component: 'Books',
-                  position: 'md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:top-[50%] md:left-[50%]'
-              },
-              {
-                  id: 4,
-                  name: 'Bin',
-                  icon: 'trash',
-                  component: 'Papelera',
-                  position: 'md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:top-[50%] md:md:top-[47%] md:left-[50%] md:md:left-[47%]'
-              }
-          ]
-        }
-    },
-    computed: {
-      getFolderClass () {
-        return (id) => {
-          const lastFolder = this.foldersOpen.slice(-1)[0]
-          return lastFolder === id ? true : false
-        }
-      }
-    },
-    methods: {
-        handleClickFolder (id) {
-            document.body.classList.add('overflow-hidden')
-            this.foldersOpen.push(id)
-        },
-        handleClickMenu (id) {
-            this.modalOpen.push(id)
-        },
-        handleUpdateCloseFolder (id) {
-            document.body.classList.remove('overflow-hidden')
-            this.foldersOpen = this.foldersOpen.filter(folder => folder !== id)
-        }
-    }
+<script setup lang="ts">
+interface PortfolioItem {
+  id: number
+  name: string
+  icon: string
+  component: string
+  position: string
+}
+
+const foldersOpen = ref<number[]>([])
+const modalOpen = ref<number[]>([])
+
+const portfolio = ref<PortfolioItem[]>([
+  {
+    id: 0,
+    name: 'Webs',
+    icon: 'folder',
+    component: 'Webs',
+    position: 'md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:top-[50%] md:left-[50%]'
+  },
+  {
+    id: 1,
+    name: 'Dribble',
+    icon: 'folder',
+    component: 'Dribble',
+    position: 'md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:top-[50%] md:top-[47%] md:left-[50%] md:left-[47%]'
+  },
+  {
+    id: 2,
+    name: 'Playlist',
+    icon: 'world',
+    component: 'Musica',
+    position: 'md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:top-[50%] md:md:top-[53%] md:left-[50%] md:left-[53%]'
+  },
+  {
+    id: 3,
+    name: 'Books',
+    icon: 'books',
+    component: 'Books',
+    position: 'md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:top-[50%] md:left-[50%]'
+  },
+  {
+    id: 4,
+    name: 'Bin',
+    icon: 'trash',
+    component: 'Papelera',
+    position: 'md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:top-[50%] md:md:top-[47%] md:left-[50%] md:md:left-[47%]'
+  }
+])
+
+const getFolderClass = computed(() => {
+  return (id: number) => {
+    const lastFolder = foldersOpen.value.slice(-1)[0]
+    return lastFolder === id ? true : false
+  }
+})
+
+const handleClickFolder = (id: number) => {
+  document.body.classList.add('overflow-hidden')
+  foldersOpen.value.push(id)
+}
+
+const handleClickMenu = (id: number) => {
+  modalOpen.value.push(id)
+}
+
+const handleUpdateCloseFolder = (id: number) => {
+  document.body.classList.remove('overflow-hidden')
+  foldersOpen.value = foldersOpen.value.filter(folder => folder !== id)
 }
 </script>
 

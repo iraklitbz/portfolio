@@ -30,7 +30,7 @@
                             target="_blank"
                             class="flex items-center dark:text-white"
                         >
-                            <NuxtIcon 
+                            <Icon 
                                 name="linkedin" 
                                 class="icon text-2xl mr-2"
                             />
@@ -43,7 +43,7 @@
                             target="_blank"
                             class="flex items-center dark:text-white"
                         >
-                        <NuxtIcon 
+                        <Icon 
                             name="instagram" 
                             class="icon text-2xl mr-2"
                         />
@@ -56,7 +56,7 @@
                             target="_blank"
                             class="flex items-center dark:text-white"
                         >
-                            <NuxtIcon 
+                            <Icon 
                                 name="github" 
                                 class="icon text-2xl mr-2"
                             />

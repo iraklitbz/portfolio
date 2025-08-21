@@ -1,57 +1,62 @@
-<script>
+<script setup lang="ts">
 import Webs from '~/components/portfolio/Webs.vue'
 import Dribble from '~/components/portfolio/Dribble.vue'
 import Papelera from '~/components/portfolio/Papelera.vue'
 import Musica from '~/components/portfolio/Musica.vue'
 import Books from '~/components/portfolio/Books.vue'
-export default {
-    props: {
-        id: {
-            type: Number,
-            default: 0
-        },
-        folderName: {
-            type: String,
-            default: 'Webs'
-        },
-        componentName: {
-            type: String,
-            default: 'Webs'
-        }
-    },
-    components: {
-        Webs,
-        Dribble,
-        Papelera,
-        Musica,
-        Books
-    },
-    data () {
-        return {
-            lengthFiles: 0,
-            randomNumber: 0,
-            scrollHeight: null,
-            scrollPosition: null
-        }
-    },
-    watch: {
-        lengthFiles () {
-            this.randomNumber = Math.floor(Math.random() * 1000) + (Math.random() * 99 / 100).toFixed(2);
-        }
-    },
-    mounted () {
-        this.$refs.componente.addEventListener('scroll', () => {
-            this.scrollPosition = this.$refs.componente.scrollTop
-        })
-    },
-    methods: {
-        handleUpdateLenthFiles (length) {
-            this.lengthFiles = length
-        },
-        handleUpdateScrollHeight (height) {
-            this.scrollHeight = height
-        }
-    }
+
+interface WindowProps {
+  id?: number
+  folderName?: string
+  componentName?: string
+}
+
+interface WindowEmits {
+  updateCloseFolder: [id: number]
+}
+
+const props = withDefaults(defineProps<WindowProps>(), {
+  id: 0,
+  folderName: 'Webs',
+  componentName: 'Webs'
+})
+
+const emit = defineEmits<WindowEmits>()
+
+const lengthFiles = ref(0)
+const randomNumber = ref(0)
+const scrollHeight = ref<number | null>(null)
+const scrollPosition = ref<number | null>(null)
+const componente = ref<HTMLElement>()
+
+const components = {
+  Webs,
+  Dribble,
+  Papelera,
+  Musica,
+  Books
+}
+
+watch(lengthFiles, () => {
+  randomNumber.value = Math.floor(Math.random() * 1000) + parseFloat((Math.random() * 99 / 100).toFixed(2))
+})
+
+onMounted(() => {
+  if (componente.value) {
+    componente.value.addEventListener('scroll', () => {
+      if (componente.value) {
+        scrollPosition.value = componente.value.scrollTop
+      }
+    })
+  }
+})
+
+const handleUpdateLenthFiles = (length: number) => {
+  lengthFiles.value = length
+}
+
+const handleUpdateScrollHeight = (height: number) => {
+  scrollHeight.value = height
 }
 </script>
 <template>
@@ -63,7 +68,7 @@ export default {
         >
             <div
                 class="text-center cursor-pointer flex items-center w-5 h-5 border-2 border-solid border-gray-500 dark:border-black absolute left-5 bg-white dark:bg-white top-1/2 -translate-y-1/2 z-10"
-                @click="$emit('updateCloseFolder', this.id)"
+                @click="emit('updateCloseFolder', props.id)"
             ></div>
             <div
                 class="flex hero flex-1 justify-center"
@@ -71,7 +76,7 @@ export default {
                 <div
                     class="flex items-center justify-center bg-gray-200 dark:bg-black px-2"
                 >
-                    <NuxtIcon 
+                    <Icon 
                         name="folder-open" 
                         size="20px"
                         class="icon text-3xl mr-2 dark:text-white"
@@ -79,7 +84,7 @@ export default {
                     <h3
                     class="text-base dark:text-white"
                     >
-                        {{ folderName }}  
+                        {{ props.folderName }}  
                     </h3>
                 </div>
             </div>
@@ -101,7 +106,7 @@ export default {
                 class="p-2 bg-white dark:bg-neutral-800 relative h-[calc(100vh-80px)] md:h-96 overflow-y-auto"
             >
                 <component
-                    :is="componentName"
+                    :is="props.componentName"
                     @updateLengthFiles="handleUpdateLenthFiles"
                     @updateScrollHeight="handleUpdateScrollHeight"
                     @updateScrollPosition="handleUpdateScrollPosition"

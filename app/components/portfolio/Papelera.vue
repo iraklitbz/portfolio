@@ -1,20 +1,27 @@
-<script>
-export default {
-    data () {
-        return {
-            papelera: [
-                {
-                    name: 'Soon...',
-                    url: 'https://www.google.com',
-                    icon: 'pdf'
-                }
-            ]
-        }
-    },
-    mounted () {
-        this.$emit('updateLengthFiles', this.papelera.length)
-    }
+<script setup lang="ts">
+interface PapeleraItem {
+  name: string
+  url: string
+  icon: string
 }
+
+interface PapeleraEmits {
+  updateLengthFiles: [count: number]
+}
+
+const emit = defineEmits<PapeleraEmits>()
+
+const papelera = ref<PapeleraItem[]>([
+  {
+    name: 'Soon...',
+    url: 'https://www.google.com',
+    icon: 'pdf'
+  }
+])
+
+onMounted(() => {
+  emit('updateLengthFiles', papelera.value.length)
+})
 </script>
 <template>
     <ul
@@ -25,7 +32,7 @@ export default {
             :key="index"
             class="text-base flex justify-center flex-col items-center p-3 dark:text-white"
         >
-            <NuxtIcon 
+            <Icon 
                 :name="element.icon" 
                 class="icon text-6xl"
             />

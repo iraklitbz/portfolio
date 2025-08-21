@@ -1,27 +1,27 @@
-<script>
-export default {
-    data () {
-        return {
-            socialNet: [
-                {
-                    name: 'Github',
-                    icon: 'github',
-                    url: 'https://github.com/iraklitbz'
-                },
-                {
-                    name: 'Instagram',
-                    icon: 'instagram',
-                    url: 'https://www.instagram.com/ika_87/'
-                },
-                {
-                    name: 'Linkedin',
-                    icon: 'linkedin',
-                    url: 'https://www.linkedin.com/in/irakli-tavberidze-47ba0338/'
-                },
-            ]
-        }
-    }
+<script setup lang="ts">
+interface SocialNetwork {
+  name: string
+  icon: string
+  url: string
 }
+
+const socialNet = ref<SocialNetwork[]>([
+  {
+    name: 'Github',
+    icon: 'github',
+    url: 'https://github.com/iraklitbz'
+  },
+  {
+    name: 'Instagram',
+    icon: 'instagram',
+    url: 'https://www.instagram.com/ika_87/'
+  },
+  {
+    name: 'Linkedin',
+    icon: 'linkedin',
+    url: 'https://www.linkedin.com/in/irakli-tavberidze-47ba0338/'
+  }
+])
 </script>
 <template>
     <div class="main-logo text-9xl">

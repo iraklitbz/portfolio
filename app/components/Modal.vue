@@ -1,21 +1,15 @@
-<script>
-export default {
-    props: {
-        title: {
-            type: String,
-            default: ''
-        },
-        description: {
-            type: String,
-            default: ''
-        },
-        urlBook: {
-            type: String,
-            default: ''
-        }
-    },
+<script setup lang="ts">
+interface ModalProps {
+  title?: string
+  description?: string
+  urlBook?: string
 }
 
+withDefaults(defineProps<ModalProps>(), {
+  title: '',
+  description: '',
+  urlBook: ''
+})
 </script>
 <template>
     <section
@@ -49,7 +43,7 @@ export default {
                             target="_blank"
                             class="flex items-center dark:text-white"
                         >
-                        <NuxtIcon 
+                        <Icon 
                             name="pdf" 
                             class="icon text-2xl mr-2 dark:text-white"
                         />

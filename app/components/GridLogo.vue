@@ -1,16 +1,10 @@
-<script>
-export default {
-    name: 'Grid',
-    data() {
-        return {
-            logo: 'irakli',
-            randomNumber: 0
-        }
-    },
-    mounted() {
-        this.randomNumber = Math.floor(Math.random() * this.logo.length)
-    }
-}
+<script setup lang="ts">
+const logo = ref('irakli')
+const randomNumber = ref(0)
+
+onMounted(() => {
+  randomNumber.value = Math.floor(Math.random() * logo.value.length)
+})
 </script>
 <template>
     <div class="main-logo text-7xl lg:text-9xl">

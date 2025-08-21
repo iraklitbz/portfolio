@@ -1,44 +1,42 @@
-<script>
-export default {
-    props: {
-        scrollHeight: {
-            type: Number,
-            default: null
-        },
-        scrollPosition: {
-            type: Number,
-            default: null
-        }
-    },
-    data () {
-        return {
-            fullScrollHeight: null
-        }
-    },
-    computed: {
-        scrollBarHeight () {
-            const contentHeight = Math.min(this.fullScrollHeight, 200);
-            const containerHeight = this.scrollHeight;
-            const ratio = contentHeight / containerHeight;
-            const minHeight = 20;
-            const maxHeight = containerHeight;
-            const thumbHeight = containerHeight * ratio;
-            const finalThumbHeight = Math.min(maxHeight, Math.max(minHeight, thumbHeight));
-            return `height: ${finalThumbHeight}px;`;
-        },
-        scrollBarPosition () {
-            const contentHeight = this.fullScrollHeight;
-            const containerHeight = this.scrollHeight;
-            const ratio = contentHeight / containerHeight;
-            const scrollPosition = this.scrollPosition;
-            const thumbPosition = scrollPosition * ratio;
-            return `top: ${Math.round(thumbPosition)}px;`;
-        }
-    },
-    mounted () {
-        this.fullScrollHeight = this.$refs.scrollBar.scrollHeight
-    },
+<script setup lang="ts">
+interface ScrollBarProps {
+  scrollHeight?: number | null
+  scrollPosition?: number | null
 }
+
+const props = withDefaults(defineProps<ScrollBarProps>(), {
+  scrollHeight: null,
+  scrollPosition: null
+})
+
+const fullScrollHeight = ref<number | null>(null)
+const scrollBar = ref<HTMLElement>()
+
+const scrollBarHeight = computed(() => {
+  const contentHeight = Math.min(fullScrollHeight.value || 0, 200)
+  const containerHeight = props.scrollHeight || 0
+  const ratio = contentHeight / containerHeight
+  const minHeight = 20
+  const maxHeight = containerHeight
+  const thumbHeight = containerHeight * ratio
+  const finalThumbHeight = Math.min(maxHeight, Math.max(minHeight, thumbHeight))
+  return `height: ${finalThumbHeight}px;`
+})
+
+const scrollBarPosition = computed(() => {
+  const contentHeight = fullScrollHeight.value || 0
+  const containerHeight = props.scrollHeight || 0
+  const ratio = contentHeight / containerHeight
+  const scrollPosition = props.scrollPosition || 0
+  const thumbPosition = scrollPosition * ratio
+  return `top: ${Math.round(thumbPosition)}px;`
+})
+
+onMounted(() => {
+  if (scrollBar.value) {
+    fullScrollHeight.value = scrollBar.value.scrollHeight
+  }
+})
 </script>
 <template>
     <div
@@ -53,7 +51,7 @@ export default {
                     <div
                         class="border-l border-r border-solid border-black dark:border-white px-1 flex items-center justify-center"
                     >
-                        <NuxtIcon 
+                        <Icon 
                             name="chevron-left" 
                             class="icon text-sm text-gray-400 dark:text-white"
                         />
@@ -61,7 +59,7 @@ export default {
                     <div
                         class="border-r border-solid border-black dark:border-white px-1 flex items-center justify-center"
                     >
-                        <NuxtIcon 
+                        <Icon 
                             name="chevron-right" 
                             class="icon text-sm text-gray-400 dark:text-white"
                         />
@@ -84,7 +82,7 @@ export default {
                 <div
                     class="border-t border-solid border-black dark:border-white py-1 flex items-center justify-center"
                 >
-                    <NuxtIcon 
+                    <Icon 
                         name="chevron-up" 
                         class="icon text-sm text-gray-400 dark:text-white"
                     />
@@ -92,7 +90,7 @@ export default {
                 <div
                     class="border-t border-solid border-black dark:border-white py-1 flex items-center justify-center"
                 >
-                    <NuxtIcon 
+                    <Icon 
                         name="chevron-down" 
                         class="icon text-sm text-gray-400 dark:text-white"
                     />

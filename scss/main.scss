@@ -1,6 +1,14 @@
 @use "mixins";
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'kernit';
+  src: url('https://res.cloudinary.com/dmb4l3zfo/raw/upload/v1678709564/font/Kernit-Filled_zmrmcc.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   /* Set global styles */
   html,

@@ -2,9 +2,9 @@ import { defineNuxtConfig } from "nuxt/config"
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
+    compatibilityDate: '2025-08-21',
     modules: [
         '@nuxt/icon',
-        '@nuxtjs/fontaine',
         '@nuxt/image'
     ],
     css: ['./scss/main.scss'],
@@ -20,9 +20,6 @@ export default defineNuxtConfig({
             ]
         }
     },
-    fontMetrics: {
-        fonts: ['kernit', { family: 'kernit', src: 'https://res.cloudinary.com/dmb4l3zfo/raw/upload/v1678709564/font/Kernit-Filled_zmrmcc.woff2' }],
-      },
     runtimeConfig: {
         public: {
           youtube_api_key: process.env.YOUTUBUE_API_KEY,
