@@ -38,7 +38,7 @@ onMounted(() => {
 })
 </script>
 <template>
-  <div v-if="error" class="p-4 text-red-500 dark:text-red-400">
+  <div v-if="error" class="p-4 text-red-500">
     {{ error }}
   </div>
   
@@ -69,15 +69,15 @@ onMounted(() => {
       </figure>
       <figure
         v-else
-        class="w-32 bg-gray-100 h-[194px] flex items-center justify-center dark:bg-black"
+        class="w-32 bg-gray-100 h-[194px] flex items-center justify-center"
       >
         <Icon 
-          name="computer-bad" 
+          name="heroicons:exclamation-triangle" 
           size="300px"
-          class="icon text-7xl dark:text-white"
+          class="icon text-7xl"
         />
       </figure>
-      <h2 class="mt-1 text-sm dark:text-white text-center">
+      <h2 class="mt-1 text-sm text-center">
         {{ formatBookTitle(book.volumeInfo.title) }} 
         {{ book.volumeInfo.authors ? '- ' + book.volumeInfo.authors[0] : '' }}
       </h2>

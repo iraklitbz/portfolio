@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onClickOutside } from '@vueuse/core'
 interface PortfolioItem {
   id: number
   name: string
@@ -68,11 +69,20 @@ const handleUpdateCloseFolder = (id: number) => {
   document.body.classList.remove('overflow-hidden')
   foldersOpen.value = foldersOpen.value.filter(folder => folder !== id)
 }
+
+const handleCloseAbout = () => {
+  modalOpen.value = modalOpen.value.filter(modal => modal !== 98)
+}
+
+// Setup click outside for About modal
+const aboutModalRef = ref<HTMLElement>()
+onClickOutside(aboutModalRef, handleCloseAbout)
+
 </script>
 
 <template>
   <div
-    class="bg-white dark:bg-black border-b border-solid border-black dark:border-white"
+    class="bg-white border-b border-solid border-black"
   >
     <Header 
       @update-about="handleClickMenu(98)"
@@ -88,14 +98,13 @@ const handleUpdateCloseFolder = (id: number) => {
           class="box cursor-pointer flex flex-col items-center"
           @click="handleClickFolder(element.id)"
         >
-            <Icon 
-              :name="element.icon" 
-              size="100px"
-              class="icon text-6xl dark:text-white"
+            <component 
+              :is="`Icon${element.icon.charAt(0).toUpperCase() + element.icon.slice(1)}`"
+              class="icon text-6xl w-[100px] h-[100px]"
             />
             <h2
               class="text-sm text-center max-w-[100px]"
-              :class="getFolderClass(element.id) ? 'bg-black text-white dark:bg-white dark:text-black' : 'text-black dark:text-white'"
+              :class="getFolderClass(element.id) ? 'bg-black text-white' : 'text-black'"
             >
                 {{  element.name }}
             </h2>
@@ -114,6 +123,7 @@ const handleUpdateCloseFolder = (id: number) => {
     />
     <About
       v-if="modalOpen.includes(98)"
+      ref="aboutModalRef"
       class="absolute transform -translate-x-1/2 -translate-y-1/2 top-[40%] left-[50%]"
       @updateCloseFolder="handleUpdateCloseFolder"
     />

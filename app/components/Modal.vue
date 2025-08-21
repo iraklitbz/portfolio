@@ -13,26 +13,26 @@ withDefaults(defineProps<ModalProps>(), {
 </script>
 <template>
     <section
-        class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-2xl bg-gray-200 dark:bg-black"
+        class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-2xl bg-gray-200"
     >
         <div
-            class="border-t border-b-4 border-l border-r-4 border-solid border-black dark:border-white"
+            class="border-t border-b-4 border-l border-r-4 border-solid border-black"
         >
-            <div class="py-6 px-10 bg-white dark:bg-black relative h-96 overflow-y-auto flex flex-col justify-between">
+            <div class="py-6 px-10 bg-white relative h-96 overflow-y-auto flex flex-col justify-between">
                 <div>
                     <h2
-                        class="text-3xl mt-8 mb-4 text-center dark:text-white"
+                        class="text-3xl mt-8 mb-4 text-center"
                     >
                         {{ title }}
                     </h2>
                     <h6
-                        class="text-base text-center dark:text-white"
+                        class="text-base text-center"
                     >
                         {{ description }}
                     </h6>
                 </div>
                 <div
-                    class="divider h-5 bg-black dark:bg-white w-full"
+                    class="divider h-5 bg-black w-full"
                 >
 
                 </div>
@@ -41,11 +41,11 @@ withDefaults(defineProps<ModalProps>(), {
                         <a
                             :href="urlBook"
                             target="_blank"
-                            class="flex items-center dark:text-white"
+                            class="flex items-center"
                         >
                         <Icon 
-                            name="pdf" 
-                            class="icon text-2xl mr-2 dark:text-white"
+                            name="heroicons:document" 
+                            class="icon text-2xl mr-2"
                         />
                             Ver más en detalle
                         </a>

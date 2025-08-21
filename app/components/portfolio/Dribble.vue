@@ -22,7 +22,7 @@ onMounted(() => {
 })
 </script>
 <template>
-  <div v-if="error" class="p-4 text-red-500 dark:text-red-400">
+  <div v-if="error" class="p-4 text-red-500">
     {{ error }}
   </div>
   
@@ -52,7 +52,7 @@ onMounted(() => {
             class="icon text-6xl w-full object-contain images"
           />
         </figure>
-        <h2 class="mt-1 text-base dark:text-white">
+        <h2 class="mt-1 text-base">
           {{ shot.title }}
         </h2>
       </a>

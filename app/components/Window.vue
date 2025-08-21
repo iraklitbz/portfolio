@@ -61,28 +61,28 @@ const handleUpdateScrollHeight = (height: number) => {
 </script>
 <template>
     <section
-        class="w-full lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-6xl bg-gray-200 dark:bg-black"
+        class="w-full lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-6xl bg-gray-200"
     >
         <header
-            class="flex justify-between items-center p-1 bg-gray-200 dark:bg-black relative"
+            class="flex justify-between items-center p-1 bg-gray-200 relative"
         >
             <div
-                class="text-center cursor-pointer flex items-center w-5 h-5 border-2 border-solid border-gray-500 dark:border-black absolute left-5 bg-white dark:bg-white top-1/2 -translate-y-1/2 z-10"
+                class="text-center cursor-pointer flex items-center w-5 h-5 border-2 border-solid border-gray-500 absolute left-5 bg-white top-1/2 -translate-y-1/2 z-10"
                 @click="emit('updateCloseFolder', props.id)"
             ></div>
             <div
                 class="flex hero flex-1 justify-center"
             >
                 <div
-                    class="flex items-center justify-center bg-gray-200 dark:bg-black px-2"
+                    class="flex items-center justify-center bg-gray-200 px-2"
                 >
                     <Icon 
-                        name="folder-open" 
+                        name="heroicons:folder-open" 
                         size="20px"
-                        class="icon text-3xl mr-2 dark:text-white"
+                        class="icon text-3xl mr-2"
                     />
                     <h3
-                    class="text-base dark:text-white"
+                    class="text-base"
                     >
                         {{ props.folderName }}  
                     </h3>
@@ -90,20 +90,20 @@ const handleUpdateScrollHeight = (height: number) => {
             </div>
         </header>
         <div
-            class="border-l border-t border-solid border-black dark:border-white m-2"
+            class="border-l border-t border-solid border-black m-2"
         >
             <header
-                class="border-b border-r border-solid border-black p-2 flex items-center justify-center bg-gray-200 dark:bg-black"
+                class="border-b border-r border-solid border-black p-2 flex items-center justify-center bg-gray-200"
             >
                 <span
-                    class="text-sm dark:text-white"
+                    class="text-sm"
                 >
                     {{ lengthFiles }} items, {{ randomNumber }} KB
                 </span>
             </header>
             <div 
                 ref="componente"
-                class="p-2 bg-white dark:bg-neutral-800 relative h-[calc(100vh-80px)] md:h-96 overflow-y-auto"
+                class="p-2 bg-white relative h-[calc(100vh-80px)] md:h-96 overflow-y-auto"
             >
                 <component
                     :is="props.componentName"

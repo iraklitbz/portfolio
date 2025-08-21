@@ -40,65 +40,65 @@ onMounted(() => {
 </script>
 <template>
     <div
-        class="scrollbar fixed left-[9px] bottom-[7px] hidden md:flex justify-end bg-gray-200 dark:bg-black w-[calc(100%-18px)] h-5"
+        class="scrollbar fixed left-[9px] bottom-[7px] hidden md:flex justify-end bg-gray-200 w-[calc(100%-18px)] h-5"
     >
             <div
-                class="border-t border-b border-solid border-black dark:border-white w-full h-5 flex justify-end"
+                class="border-t border-b border-solid border-black w-full h-5 flex justify-end"
             >
                 <div
                     class="flex"
                 >
                     <div
-                        class="border-l border-r border-solid border-black dark:border-white px-1 flex items-center justify-center"
+                        class="border-l border-r border-solid border-black px-1 flex items-center justify-center"
                     >
                         <Icon 
-                            name="chevron-left" 
-                            class="icon text-sm text-gray-400 dark:text-white"
+                            name="heroicons:chevron-left" 
+                            class="icon text-sm text-gray-400"
                         />
                     </div>
                     <div
-                        class="border-r border-solid border-black dark:border-white px-1 flex items-center justify-center"
+                        class="border-r border-solid border-black px-1 flex items-center justify-center"
                     >
                         <Icon 
-                            name="chevron-right" 
-                            class="icon text-sm text-gray-400 dark:text-white"
+                            name="heroicons:chevron-right" 
+                            class="icon text-sm text-gray-400"
                         />
                     </div>
                 </div>
             </div>
             <div
-                class="w-5 text-gray-400 dark:text-white"
+                class="w-5 text-gray-400"
             >
             //
             </div>
         </div>
         <div
             ref="scrollBar"
-            class="scrollbar hidden fixed right-[8px] top-[87px] h-[calc(100%-113px)] w-5 border-l border-r border-b border-solid border-black dark:border-white md:flex items-end  bg-gray-200 dark:bg-black overflow-hidden"
+            class="scrollbar hidden fixed right-[8px] top-[87px] h-[calc(100%-113px)] w-5 border-l border-r border-b border-solid border-black md:flex items-end  bg-gray-200 overflow-hidden"
         >
             <div
-                class="flex flex-col w-5 relative z-40 bg-slate-200 dark:bg-black"
+                class="flex flex-col w-5 relative z-40 bg-slate-200"
             >
                 <div
-                    class="border-t border-solid border-black dark:border-white py-1 flex items-center justify-center"
+                    class="border-t border-solid border-black py-1 flex items-center justify-center"
                 >
                     <Icon 
-                        name="chevron-up" 
-                        class="icon text-sm text-gray-400 dark:text-white"
+                        name="heroicons:chevron-up" 
+                        class="icon text-sm text-gray-400"
                     />
                 </div>
                 <div
-                    class="border-t border-solid border-black dark:border-white py-1 flex items-center justify-center"
+                    class="border-t border-solid border-black py-1 flex items-center justify-center"
                 >
                     <Icon 
-                        name="chevron-down" 
-                        class="icon text-sm text-gray-400 dark:text-white"
+                        name="heroicons:chevron-down" 
+                        class="icon text-sm text-gray-400"
                     />
                 </div>
             </div>
             <div
                 v-if="scrollHeight > 360"
-                class="bg-gray-500 dark:bg-neutral-600 w-full z-10 absolute"
+                class="bg-gray-500 w-full z-10 absolute"
                 :style="`${scrollBarHeight}; ${scrollBarPosition}`"
             ></div>
         </div>

@@ -20,7 +20,7 @@ onMounted(() => {
       <a
         :href="website.url"
         target="_blank"
-        class="flex justify-center flex-col items-center dark:text-white hover:opacity-75 transition-opacity"
+        class="flex justify-center flex-col items-center hover:opacity-75 transition-opacity"
       >
         <Icon 
           :name="website.icon" 

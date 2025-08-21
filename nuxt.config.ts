@@ -2,12 +2,14 @@ import { defineNuxtConfig } from "nuxt/config"
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
-    compatibilityDate: '2025-08-21',
     modules: [
-        '@nuxt/icon',
-        '@nuxt/image'
+        '@nuxt/image',
+        'nuxt-svgo'
     ],
-    css: ['./scss/main.scss'],
+    svgo: {
+        componentPrefix: 'Icon'
+    },
+    css: ['./app/assets/css/main.css'],
     vite: {
         plugins: [tailwindcss()]
     },

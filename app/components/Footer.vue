@@ -8,17 +8,17 @@ interface SocialNetwork {
 const socialNet = ref<SocialNetwork[]>([
   {
     name: 'Github',
-    icon: 'github',
+    icon: 'heroicons:code-bracket',
     url: 'https://github.com/iraklitbz'
   },
   {
     name: 'Instagram',
-    icon: 'instagram',
+    icon: 'heroicons:camera',
     url: 'https://www.instagram.com/ika_87/'
   },
   {
     name: 'Linkedin',
-    icon: 'linkedin',
+    icon: 'heroicons:academic-cap',
     url: 'https://www.linkedin.com/in/irakli-tavberidze-47ba0338/'
   }
 ])

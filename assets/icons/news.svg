@@ -1,0 +1,32 @@
+<svg width="62" height="52" viewBox="0 0 62 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 4H12V8H14V10H12V14H10V4Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 10V4H18V14H16V12H14V10H16Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M40 10V8H42V10H40Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M42 12V10H44V12H42Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M40 14V12H42V14H40Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M42 8V6H44V8H42Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M28 10V6H30V10H28Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M30 14V10H32V14H30Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M32 10V6H34V10H32Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M34 14V10H36V14H34Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M36 10V6H38V10H36Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20 8H22V10H24V12H25.9996L26 14H22V12H20V8Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24 8H22V6H26V10H24V8Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M50 18H4V16H50V18Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M50 23H4V21H50V23Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 28H6V26H16V28Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M28 28H18V26H28V28Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M48 28L30 28V26L48 26V28Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 32L6 32V30H16V32Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M28 32L18 32V30H28V32Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M48 32L30 32V30L48 30V32Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 36H6V34H16V36Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M28 36H18V34H28V36Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 40H6V38H16V40Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M28 40H18V38H28V40Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 44H6V42H16V44Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M28 44H18V42H28V44Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 48H6V46H16V48Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M28 48H18V46H28V48Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V50H2V52H60V50H62V4H58V2H54V0H0ZM60 50H58V6H60V50ZM48 50H52V2H2V50H30V34H48V50ZM54 4H56V50H54V4Z" fill="currentColor"/>
+</svg>

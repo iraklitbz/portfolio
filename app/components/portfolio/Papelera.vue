@@ -30,10 +30,10 @@ onMounted(() => {
         <li
             v-for="(element, index) in papelera"
             :key="index"
-            class="text-base flex justify-center flex-col items-center p-3 dark:text-white"
+            class="text-base flex justify-center flex-col items-center p-3"
         >
             <Icon 
-                :name="element.icon" 
+                :name="'heroicons:document'" 
                 class="icon text-6xl"
             />
             {{ element.name }}

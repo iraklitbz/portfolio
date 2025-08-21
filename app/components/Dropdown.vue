@@ -20,13 +20,6 @@ withDefaults(defineProps<DropdownProps>(), {
   redirect: false
 })
 
-const handleAspectMode = (id: number) => {
-  if (id === 2) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
-}
 </script>
 <template>
     <ul>
@@ -35,7 +28,6 @@ const handleAspectMode = (id: number) => {
             :key="index"
             class="text-base p-3 text-left hover:bg-black hover:text-white cursor-pointer flex items-center"
             :class="hasDropdown ? 'bg-white text-black' : 'text-black'"
-            @click="element.id ? handleAspectMode(element.id) : null"
 
         >
             <Icon 

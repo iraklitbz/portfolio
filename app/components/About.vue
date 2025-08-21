@@ -1,25 +1,25 @@
 <template>
     <section
-        class="w-full lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-4xl bg-gray-200 dark:bg-black"
+        class="w-full lg:w-[calc(100%_-_3rem)] mx-auto max-w-xl  md:max-w-4xl bg-gray-200"
     >
         <div
-            class="border-t border-b-4 border-l border-r-4 border-solid border-black dark:border-white"
+            class="border-t border-b-4 border-l border-r-4 border-solid border-black"
         >
-            <div class="py-6 px-5 md:px-10 bg-white dark:bg-black relative md:h-96 overflow-y-auto flex flex-col justify-between">
+            <div class="py-6 px-5 md:px-10 bg-white relative md:h-96 overflow-y-auto flex flex-col justify-between">
                 <div>
                     <h2
-                        class="text-3xl mt-8 mb-4 text-center dark:text-white"
+                        class="text-3xl mt-8 mb-4 text-center"
                     >
                         Hi, im Irakli.
                     </h2>
                     <h6
-                        class="text-base text-center dark:text-white"
+                        class="text-base text-center"
                     >
                         I'm a frontend developer based in Madrid. I'm passionate about web development and been dedicated to it for the last 10 years. I'm currently working at TUI as a Senior frontend developer. Besides coding, i love books & music, i will share some of my favorites here.
                     </h6>
                 </div>
                 <div
-                    class="divider h-5 bg-black dark:bg-neutral-600 w-full mt-10 md:mt-0"
+                    class="divider h-5 bg-black w-full mt-10 md:mt-0"
                 >
 
                 </div>
@@ -28,10 +28,9 @@
                         <a
                             href="https://www.linkedin.com/in/irakli-tavberidze-47ba0338/"
                             target="_blank"
-                            class="flex items-center dark:text-white"
+                            class="flex items-center"
                         >
-                            <Icon 
-                                name="linkedin" 
+                            <IconLinkedin 
                                 class="icon text-2xl mr-2"
                             />
                             Linkedin
@@ -41,10 +40,9 @@
                         <a
                             href="https://www.instagram.com/ika_87/"
                             target="_blank"
-                            class="flex items-center dark:text-white"
+                            class="flex items-center"
                         >
-                        <Icon 
-                            name="instagram" 
+                        <IconInstagram 
                             class="icon text-2xl mr-2"
                         />
                         Instagram
@@ -54,10 +52,9 @@
                         <a
                             href="https://github.com/iraklitbz"
                             target="_blank"
-                            class="flex items-center dark:text-white"
+                            class="flex items-center"
                         >
-                            <Icon 
-                                name="github" 
+                            <IconGithub 
                                 class="icon text-2xl mr-2"
                             />
                             Github

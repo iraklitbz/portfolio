@@ -49,21 +49,6 @@ const navbar = ref<NavItem[]>([
         icon: 'email'
       }
     ]
-  },
-  {
-    id: 2,
-    name: 'Appearance',
-    hasDropdown: false,
-    dropdown: [
-      {
-        id: 1,
-        name: 'Original'
-      },
-      {
-        id: 2,
-        name: 'Dark'
-      }
-    ]
   }
 ])
 
@@ -119,7 +104,7 @@ onClickOutside(headerRef, handleSubMenuClose)
                 <li
                     v-for="(element, index) in navbar"
                     class="px-4 py-2 cursor-pointer relative"
-                    :class="element.hasDropdown ? 'bg-black text-white dark:bg-white dark:text-black' : 'text-black dark:text-white'"
+                    :class="element.hasDropdown ? 'bg-black text-white' : 'text-black'"
                     @click="handleSubMenu(element)"
                 >
                     {{ element.name }}
@@ -133,7 +118,7 @@ onClickOutside(headerRef, handleSubMenuClose)
                 </li>
                 <li
                     class="px-4 py-2 cursor-pointer relative"
-                    :class="aboutMeActive ? 'bg-black text-white dark:bg-white dark:text-black' : 'text-black dark:text-white'"
+                    :class="aboutMeActive ? 'bg-black text-white' : 'text-black'"
                     @click="handleAboutMe"
                 >
                     About me
