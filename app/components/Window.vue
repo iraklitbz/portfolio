@@ -58,6 +58,10 @@ const handleUpdateLenthFiles = (length: number) => {
 const handleUpdateScrollHeight = (height: number) => {
   scrollHeight.value = height
 }
+
+const handleUpdateScrollPosition = (position: number) => {
+  scrollPosition.value = position
+}
 </script>
 <template>
     <section
@@ -76,10 +80,8 @@ const handleUpdateScrollHeight = (height: number) => {
                 <div
                     class="flex items-center justify-center bg-gray-200 px-2"
                 >
-                    <Icon 
-                        name="heroicons:folder-open" 
-                        size="20px"
-                        class="icon text-3xl mr-2"
+                    <IconFolderOpen 
+                        class="icon text-3xl mr-2 w-5 h-5"
                     />
                     <h3
                     class="text-base"
@@ -106,7 +108,7 @@ const handleUpdateScrollHeight = (height: number) => {
                 class="p-2 bg-white relative h-[calc(100vh-80px)] md:h-96 overflow-y-auto"
             >
                 <component
-                    :is="props.componentName"
+                    :is="components[props.componentName as keyof typeof components]"
                     @updateLengthFiles="handleUpdateLenthFiles"
                     @updateScrollHeight="handleUpdateScrollHeight"
                     @updateScrollPosition="handleUpdateScrollPosition"

@@ -51,16 +51,14 @@ onMounted(() => {
                     <div
                         class="border-l border-r border-solid border-black px-1 flex items-center justify-center"
                     >
-                        <Icon 
-                            name="heroicons:chevron-left" 
+                        <IconChevronLeft 
                             class="icon text-sm text-gray-400"
                         />
                     </div>
                     <div
                         class="border-r border-solid border-black px-1 flex items-center justify-center"
                     >
-                        <Icon 
-                            name="heroicons:chevron-right" 
+                        <IconChevronRight 
                             class="icon text-sm text-gray-400"
                         />
                     </div>
@@ -82,16 +80,14 @@ onMounted(() => {
                 <div
                     class="border-t border-solid border-black py-1 flex items-center justify-center"
                 >
-                    <Icon 
-                        name="heroicons:chevron-up" 
+                    <IconChevronUp 
                         class="icon text-sm text-gray-400"
                     />
                 </div>
                 <div
                     class="border-t border-solid border-black py-1 flex items-center justify-center"
                 >
-                    <Icon 
-                        name="heroicons:chevron-down" 
+                    <IconChevronDown 
                         class="icon text-sm text-gray-400"
                     />
                 </div>

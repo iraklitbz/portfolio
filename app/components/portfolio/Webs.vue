@@ -1,6 +1,7 @@
 <script setup lang="ts">
 interface WebsEmits {
   updateLengthFiles: [count: number]
+  updateScrollHeight: [height: number]
 }
 
 const emit = defineEmits<WebsEmits>()
@@ -22,9 +23,9 @@ onMounted(() => {
         target="_blank"
         class="flex justify-center flex-col items-center hover:opacity-75 transition-opacity"
       >
-        <Icon 
-          :name="website.icon" 
-          class="icon text-6xl"
+        <component 
+          :is="`Icon${website.icon.charAt(0).toUpperCase() + website.icon.slice(1)}`"
+          class="icon text-6xl w-16 h-16"
         />
         {{ website.name }}
       </a>

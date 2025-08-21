@@ -71,10 +71,8 @@ onMounted(() => {
         v-else
         class="w-32 bg-gray-100 h-[194px] flex items-center justify-center"
       >
-        <Icon 
-          name="heroicons:exclamation-triangle" 
-          size="300px"
-          class="icon text-7xl"
+        <IconBook 
+          class="icon text-7xl w-24 h-32"
         />
       </figure>
       <h2 class="mt-1 text-sm text-center">

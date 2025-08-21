@@ -7,6 +7,7 @@ interface PapeleraItem {
 
 interface PapeleraEmits {
   updateLengthFiles: [count: number]
+  updateScrollHeight: [height: number]
 }
 
 const emit = defineEmits<PapeleraEmits>()
@@ -32,9 +33,8 @@ onMounted(() => {
             :key="index"
             class="text-base flex justify-center flex-col items-center p-3"
         >
-            <Icon 
-                :name="'heroicons:document'" 
-                class="icon text-6xl"
+            <IconPdf 
+                class="icon text-6xl w-16 h-16"
             />
             {{ element.name }}
         </li>
